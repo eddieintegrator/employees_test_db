@@ -6,16 +6,6 @@
 PRAGMA foreign_keys = off;
 BEGIN TRANSACTION;
 
--- Table: dept_manager
-CREATE TABLE dept_manager (
-   emp_no       INT             NOT NULL,
-   dept_no      CHAR(4)         NOT NULL,
-   from_date    DATE            NOT NULL,
-   to_date      DATE            NOT NULL,
-   FOREIGN KEY (emp_no)  REFERENCES employees (emp_no)    ON DELETE CASCADE,
-   FOREIGN KEY (dept_no) REFERENCES departments (dept_no) ON DELETE CASCADE,
-   PRIMARY KEY (emp_no,dept_no)
-);
 INSERT INTO dept_manager (emp_no, dept_no, from_date, to_date) VALUES (110022, 'd001', '1985-01-01', '1991-10-01');
 INSERT INTO dept_manager (emp_no, dept_no, from_date, to_date) VALUES (110039, 'd001', '1991-10-01', '9999-01-01');
 INSERT INTO dept_manager (emp_no, dept_no, from_date, to_date) VALUES (110085, 'd002', '1985-01-01', '1989-12-17');

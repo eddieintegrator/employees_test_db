@@ -6,8 +6,6 @@
 PRAGMA foreign_keys = off;
 BEGIN TRANSACTION;
 
--- Table: departments
-CREATE TABLE departments (dept_no CHAR (4) NOT NULL PRIMARY KEY, dept_name VARCHAR (40) NOT NULL UNIQUE);
 INSERT INTO departments (dept_no, dept_name) VALUES ('d001', 'Marketing');
 INSERT INTO departments (dept_no, dept_name) VALUES ('d002', 'Finance');
 INSERT INTO departments (dept_no, dept_name) VALUES ('d003', 'Human Resources');
